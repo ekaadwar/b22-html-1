@@ -1,0 +1,55 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(#10222c, #18485c);
+}
+
+.container {
+  display: grid;
+  width: 400px;
+  height: 400px;
+  border: 10px solid #4d3400;
+  margin: 50px auto;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.column {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+/* baris ganjil */
+.row:nth-child(2n + 1) .column:nth-child(2n) {
+  background-color: black;
+}
+
+.row:nth-child(2n + 1) .column:nth-child(2n + 1) {
+  background-color: #e0d9af;
+}
+
+.row:nth-child(2n + 1) .column:nth-child(2n + 1):hover {
+  background-color: #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+/* baris genap */
+.row:nth-child(2n) .column:nth-child(2n + 1) {
+  background-color: black;
+}
+
+.row:nth-child(2n) .column:nth-child(2n) {
+  background-color: #e0d9af;
+}
+
+.row:nth-child(2n) .column:nth-child(2n):hover {
+  background-color: #03e9f4;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
